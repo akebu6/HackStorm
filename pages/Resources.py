@@ -1,5 +1,4 @@
 import streamlit as st
-import argparse
 import pandas as pd
 
 from googleapiclient.discovery import build
@@ -16,7 +15,6 @@ st.title("Resources to help you get started")
 st.write("Here are some resources to help you get started with your hackathon project.")
 
 st.write('---')
-st.header("Video Tutorials")
 
 # YouTube search
 def youtube_search(options, max_results=11):
@@ -39,9 +37,7 @@ def youtube_search(options, max_results=11):
   # matching videos, channels, and playlists.
 
 def main():
-  st.markdown('Your search results')
-  
-  search_query = st.text_input("Search for a video", placeholder="Press Enter")
+  search_query = st.text_input("Search for a video", placeholder="Search any video")
   
   if st.button('Search'):
     results = youtube_search(search_query)
@@ -60,6 +56,8 @@ def main():
 if __name__ == "__main__":
     main()
 
+st.write('---')
+st.header("Video Tutorials")
 # Video container
 with st.container():
   video1, video2 = st.columns(2)

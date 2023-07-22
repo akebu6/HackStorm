@@ -11,6 +11,11 @@ From a number of the hackathons that the team members have taken part in, findin
 ## 🎨 Design
 
 ## 🛠 How we Built it
+- Streamlit
+- Firebase
+- Vanilla CSS
+- OpenAI API
+- YouTube Search API
 
 ## ✨ Proud Achievements
 
@@ -19,5 +24,5 @@ From a number of the hackathons that the team members have taken part in, findin
 ## 🙌 Insights from HackStorm
 
 ## 🚀 What's next for HackStorm
-
-
+#### NOTE
+Note ⚠️ — API credentials have been revoked. If you want to run the same on your local, use your own credentials.
