@@ -1,20 +1,69 @@
 import streamlit as st
+import argparse
+import pandas as pd
+
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+
+DEVELOPER_KEY = 'YOUR_DEVELOPER_KEY'
+YOUTUBE_API_SERVICE_NAME = 'youtube'
+YOUTUBE_API_VERSION = 'v3'
 
 st.title("Resources to help you get started")
 st.write("Here are some resources to help you get started with your hackathon project.")
 
-video_header_empty = st.empty()
-blogs_header_empty = st.empty()
-python_video_empty = st.empty()
-machine_learning_video_empty = st.empty()
-web_video_empty = st.empty()
-mobile_video_empty = st.empty()
+st.write('---')
+st.header("Video Tutorials")
 
+# YouTube search
+def youtube_search(options, max_results=11):
+  youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,
+    developerKey=DEVELOPER_KEY)
+
+  # Call the search.list method to retrieve results matching the specified
+  # query term.
+  search_response = youtube.search().list(
+    part="snippet",
+    q=options,
+    type="video",
+    maxResults=max_results
+  )
+  
+  response = search_response.execute()
+  return response.get("items", [])
+
+  # Add each result to the appropriate list, and then display the lists of
+  # matching videos, channels, and playlists.
+
+def main():
+  st.markdown('Your search results')
+  
+  search_query = st.text_input("Search for a video", placeholder="Press Enter")
+  
+  if st.button('Search'):
+    results = youtube_search(search_query)
+    
+    df = pd.DataFrame(
+      {
+        
+        'Title': [result['snippet']['title'] for result in results],
+        'Description': [result['snippet']['description'] for result in results],
+        'Link': [f"https://www.youtube.com/watch?v={result['id']['videoId']}" for result in results],
+      }
+    )
+    
+    st.dataframe(df)
+
+if __name__ == "__main__":
+    main()
+
+# Video container
 with st.container():
   video1, video2 = st.columns(2)
   video3, video4 = st.columns(2)
-  
-  video_header_empty.markdown("## Video Tutorials")
   
   video1.video('https://www.youtube.com/watch?v=9cKsq14Kfsw')
   video1.markdown('Responsive Bootstrap Website Start To Finish with Bootstrap 4, HTML5 & CSS3')
@@ -28,6 +77,7 @@ with st.container():
 st.write('---')
 
 st.header("Blogs")
+st.text_input("Search for a blog", placeholder="Press Enter")
 
 with st.container():
   blog1, blog2 = st.columns(2)

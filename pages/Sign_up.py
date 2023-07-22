@@ -29,7 +29,7 @@ if submit:
     st.success('Your account has been created');
     st.balloons()
     user=auth.sign_in_with_email_and_password(email,password)
-    db.child(user['localId']).child("Handle").set(username)
+    db.child(user['localId']).child("Handle").set(name)
     db.child(user['localId']).child("ID").set(user['localId'])
 
 
