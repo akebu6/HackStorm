@@ -16,6 +16,14 @@ lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fc
 idea_generator_image = Image.open('./images/idea_generator.png')
 resources_image = Image.open('./images/resources.png')
 
+selected = option_menu(
+  menu_title = None,
+  options = ['Home', 'Resources', 'Sign in', 'Sign up'],
+  icons = ['house-door', 'journal', 'box-arrow-in-left', 'box-arrow-in-right'],
+  default_index = 0,
+  orientation = 'horizontal',
+)
+
 column1, column2 = st.columns([3, 2])
 with column1:
     st.markdown("# Welcome to HackStorm")
