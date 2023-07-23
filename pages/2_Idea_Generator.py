@@ -4,7 +4,7 @@ import pandas as pd
 from streamlit_chat import message
 
 # Set up your OpenAI API key
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "YOUR_API_KEY"
 openai.api_key = OPENAI_API_KEY
 
 st.title("Chatting with Hacky")
