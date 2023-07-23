@@ -20,6 +20,8 @@ lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fc
 idea_generator_image = Image.open('./images/idea_generator.png')
 resources_image = Image.open('./images/resources.png')
 
+st.set_page_config(layout="wide")
+
 selected = option_menu(
   menu_title = None,
   options = ['Home', 'Idea Generator', 'Resources'],
