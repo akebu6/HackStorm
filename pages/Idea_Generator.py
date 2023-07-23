@@ -1,7 +1,6 @@
 import streamlit as st
 import openai
 import pandas as pd
-from streamlit_chat import message
 
 # Set up your OpenAI API key
 OPENAI_API_KEY = "YOUR_API_KEY"
