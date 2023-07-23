@@ -5,7 +5,11 @@ import streamlit as st
 from datetime import datetime
 from google.oauth2 import id_token
 from google.auth.transport import requests
+
+st.set_page_config(layout="centered")
+
 st.title("Sign in")
+
 def get_google_id_token(auth_code, client_id):
     try:
         token = id_token.fetch_id_token(requests.Request(), auth_code, client_id)
@@ -21,7 +25,8 @@ firebaseConfig = {
     'messagingSenderId': "915260469025",
     'appId': "1:915260469025:web:7af65c49527ed10c6b9860",
     'measurementId': "G-HCS2SBRRX7"
-  };
+  }
+
 firebase=pyrebase.initialize_app(firebaseConfig)
 auth=firebase.auth()
 

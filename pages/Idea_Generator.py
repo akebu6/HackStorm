@@ -1,10 +1,11 @@
 import streamlit as st
 import openai
 import pandas as pd
+
 st.set_page_config(layout="centered")
 
 # Set up your OpenAI API key
-OPENAI_API_KEY = ""
+OPENAI_API_KEY = "YOUR_API_KEY"
 openai.api_key = OPENAI_API_KEY
 
 st.title("Chatting with Hacky")

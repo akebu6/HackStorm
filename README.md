@@ -11,6 +11,19 @@ HackStorm is designed to be a platform that you can use not only generating idea
 HackStorm has been designed to help hackers find all the resources for their projects in one place, whether you have an idea or don't, you can always access the resources that HackStorm has to offer
 
 ## 🎨 Design
+We were heavily inspired by the revised version of Double Diamond design process, which not only includes visual design, but a full-fledged research cycle in which you must discover and define your problem before tackling your solution & then finally deploy it.
+
+<img src="https://res.cloudinary.com/devpost/image/fetch/s--RDG-HzfY--/c_limit,f_auto,fl_lossy,q_auto:eco,w_900/https://assets.website-files.com/5e2ae40d598c476b087ac0cb/5e4541d9b89a7d396a6d6d36_Process%2520Focus2_1%25402x.png" />
+
+> 1. Discover: a deep dive into the problem we are trying to solve.
+> 2. Define: synthesizing the information from the discovery phase into a problem definition.
+> 3. Develop: think up solutions to the problem.
+> 4. Deliver: pick the best solution and build that.
+
+HackStorm was designed using Figma for a sample of how the web app would look lik. Below is what the team had initially designed but you will notice that there are slight variations from the finished web app
+
+![image](https://github.com/akebu6/HackStorm/assets/74776297/00efa2dc-e64c-4139-9c9b-d3fefc82a018)
+
 
 ## 🛠 How we Built it
 - Streamlit
