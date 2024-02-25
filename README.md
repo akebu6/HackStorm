@@ -5,7 +5,7 @@ Hacks for Hacker MLH Hackathon submission
 From a number of the hackathons that the team members have taken part in, finding an idea to build for the hackathon is always one of the most challenging as well as having a place where you can easily find resources to help you with your project. The team saw this as an opportunity to create a platform that allows hackers to generate ideas from simply filling in a few inputs and also have access to all the learning resources such as videos and blogs in one place.
 
 ## 🤔 Purpose
-HackStorm is designed to be a platform that you can use not only generating ideas for your hackathon but is also designed to help you find all the resources you need for your project in one place. This includes access to YouTubu's search feature with some example project videos and blogs displayed.
+HackStorm is designed to be a platform that you can use not only generating ideas for your hackathon but is also designed to help you find all the resources you need for your project in one place. This includes access to YouTube's search feature with some example project videos and blogs displayed.
 
 ## What it does
 HackStorm has been designed to help hackers find all the resources for their projects in one place, whether you have an idea or don't, you can always access the resources that HackStorm has to offer
